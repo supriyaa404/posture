@@ -1,0 +1,70 @@
+# ---------- Secrets (NEVER commit) ----------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+client_secret*.json
+credentials*.json
+
+# ---------- OS / editor ----------
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+*.egg-info/
+.coverage
+htmlcov/
+
+# ---------- Node / Next.js ----------
+node_modules/
+.next/
+out/
+build/
+dist/
+*.tsbuildinfo
+npm-debug.log*
+yarn-error.log*
+
+# ---------- Docker / database ----------
+postgres_data/
+pgdata/
+*.sqlite3
+
+# ---------- Dataset contents (keep folders, ignore data) ----------
+dataset/external/ui_prmd/*
+dataset/synthetic/*
+dataset/landmarks_real/*
+dataset/processed/*
+!dataset/**/.gitkeep
+
+# ---------- ML artefacts ----------
+# Training checkpoints are large; the small exported .onnx model may be committed.
+*.pt
+*.pth
+*.ckpt
+runs/
+lightning_logs/
+tensorboard_logs/
+
+# ---------- Privacy: never commit raw video or camera recordings ----------
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+demo/videos/*
+!demo/videos/.gitkeep

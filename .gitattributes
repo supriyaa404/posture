@@ -1,0 +1,12 @@
+# Normalise line endings (important on Windows)
+* text=auto
+*.sh text eol=lf
+*.py text eol=lf
+*.sql text eol=lf
+
+# Binary files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.pdf binary
+*.onnx binary
